@@ -9,11 +9,24 @@
 </head>
 <body>
 <div id="center">
-	<object type="application/x-shockwave-flash" data="http://battlefordreamisland.com/5b/c.swf?path=5b.swf" width="960" height="540">
-		<param name="movie" value="http://battlefordreamisland.com/5b/c.swf?path=5b.swf">
-		<param name="base" value="http://battlefordreamisland.com/5b/">
-		You need a more recent version of <a href="http://get.adobe.com/flashplayer/">Adobe Flash Player</a>.
-	</object>
+	<script>
+window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+"allowScriptAccess": true,
+"base": "https://theghostboi64.github.io/bfdia5b/",
+"autoplay": "auto",	
+	};
+	</script>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("center");
+        container.appendChild(player);
+        player.load("c.swf?path=5b.swf");
+    });
+</script>
 <p>
 	This game is part of <a href="http://battlefordreamisland.com">Battle for Dream Island</a>.<br>
 	<a href="http://htwins.net">HTwins.net</a>
